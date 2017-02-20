@@ -1,6 +1,3 @@
 {
-  "presets": ["airbnb"],
-  "plugins": [
-    ["transform-class-properties", { "spec": true }]
-  ]
+  "presets": ["airbnb"]
 }
