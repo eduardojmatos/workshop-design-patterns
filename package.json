@@ -2,11 +2,11 @@
   "name": "design-patterns",
   "version": "1.0.0",
   "description": "Lessons from my workshop about design patterns",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -w -d -c -G --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --reporter dot --bail --check-leaks",
     "build": "babel src --watch -d build",
-    "dev": "npm run build"
+    "dev": "npm-run-all -p build test"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,10 @@
     "babel-cli": "^6.22.2",
     "babel-eslint": "^7.1.1",
     "babel-preset-airbnb": "^2.2.3",
+    "babel-register": "^6.24.0",
     "eslint": "^3.15.0",
-    "mocha": "^3.2.0"
+    "expect.js": "^0.3.1",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.2"
   }
 }
