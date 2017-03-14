@@ -1,5 +1,5 @@
 const expect = require("expect.js");
-const Animal = require("../../../build/constructor/prototype/animal.js");
+const Animal = require("../../../build/constructor/common/animal.js");
 
 describe("Animal", function () {
   describe("#constructor", function () {
