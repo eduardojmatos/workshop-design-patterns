@@ -8,6 +8,9 @@
     "build": "babel src --watch -d build",
     "dev": "npm-run-all -p build test"
   },
+  "engines": {
+    "node": ">=6"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eduardojmatos/workshop-design-patterns.git"
