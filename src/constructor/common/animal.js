@@ -1,15 +1,20 @@
-(function () {
-  const defaultOptions = {
-    name: "Default Animal",
-    specie: "Unspecified"
-  };
+const defaultOptions =  {
+  name: "Default Animal",
+  specie: "Unspecified"
+}
 
-  const Animal = function (options = defaultOptions) {
-    this.name = options.name;
-    this.specie = options.specie;
+const Animal = function (options = defaultOptions) {
 
-    this.getFullName = () => `${this.name}, ${this.specie}`;
-  };
+  this.name = options.name;
+  this.specie = options.specie;
 
-  module.exports = Animal;
-})();
+  this.getFullName = () => {
+    return `${this.name}, ${this.specie}`;
+  }
+
+  this.getWeight = () => {
+    return `${this.name}, ${this.weight}kg`;
+  }
+}
+
+module.exports = Animal;

@@ -12,6 +12,16 @@ describe("Animal", function () {
       });
     });
 
+    describe("#getWeight", function () {
+      let lion = new Animal({name: "Lion", specie: "Mammal"});
+      lion.weight = 500;
+
+      it("returns animal weigth", function () {
+        expect(lion.weight).to.be(500);
+        expect(lion.getWeight()).to.be("Lion, 500kg");
+      });
+    });
+
     describe("with parameters", function () {
       let lion = new Animal({name: "Lion", specie: "Mammal"});
 
