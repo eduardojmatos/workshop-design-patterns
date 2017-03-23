@@ -4,7 +4,7 @@
   "description": "Lessons from my workshop about design patterns",
   "main": "",
   "scripts": {
-    "test": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail --check-leaks || exit 0",
+    "test": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail --ignore-leaks || exit 0",
     "build": "babel src -d build",
     "watch:src": "onchange \"src/\" -p 10 -- npm-run-all -s build test",
     "watch:test": "onchange \"test/\" -p 10 -- npm run test",
@@ -36,7 +36,9 @@
     "babel-register": "^6.24.0",
     "eslint": "^3.15.0",
     "expect.js": "^0.3.1",
+    "jsdom": "^9.12.0",
     "mocha": "^3.2.0",
+    "mocha-jsdom": "^1.1.0",
     "npm-run-all": "^4.0.2",
     "onchange": "^3.2.1",
     "sinon": "^2.1.0"
