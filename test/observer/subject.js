@@ -1,5 +1,4 @@
-import expect from "expect.js";
-//const expect = require("expect.js");
+const expect = require("expect.js");
 const sinon = require("sinon");
 const Subject = require("../../build/observer/subject.js");
 
