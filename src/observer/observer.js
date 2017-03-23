@@ -1,9 +1,11 @@
-var Observer = function () {
+const Observer = () => {
 
   return {
     notify: function (msg) {
       const message = `Observer message: ${msg}`;
-      console.log(message);
+
+      // could send to another point
+      // ex: console.log(msg, "=>", message);
 
       return message;
     }

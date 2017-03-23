@@ -1,4 +1,4 @@
-var Subject = function() {
+const Subject = () => {
 
   return {
     observers: [],
@@ -25,7 +25,6 @@ var Subject = function() {
 
     notifyAll: function() {
       for (let i = 0; i < this.observers.length; i++){
-        console.log(i);
         this.observers[i].notify(i);
       };
     }
