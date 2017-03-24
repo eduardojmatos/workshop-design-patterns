@@ -1,28 +1,29 @@
-(function () {
-  const FootballPlayer = function () {
-    const minimalAge = 18;
-    const hasMinimalAge = (age) => age > minimalAge;
+const FootballPlayer = function (options = {name: "Default Name", age: 18}) {
+  let modality = "Football";
 
-    let modality = "Football";
+  const hasMinimalAge = (age) => age >= 18;
 
-    return {
-      name: "Default Name",
-      age: minimalAge,
-      setModality: (newModality = modality) => {
-        modality = newModality;
-        return modality;
-      },
-      getModality: () => modality,
-      setAge: function(age) {
-        if (!hasMinimalAge(age)) {
-          return null;
-        }
+  return {
+    name: options.name,
+    age: options.age,
+    getModality: () => modality,
+    setModality: function (newModality = modality) {
+      if (!hasMinimalAge(this.age)) {
+        throw new Error("Has no minimal age for Football");
+      }
 
-        this.age = age;
-        return this.age;
-      },
-    };
-  };
+      modality = newModality;
+      return modality;
+    },
+    setAge: function (newAge = age) {
+      if (!hasMinimalAge(newAge)) {
+        return null;
+      }
 
-  module.exports = FootballPlayer;
-})();
+      this.age = newAge;
+      return this.age;
+    }
+  }
+}
+
+module.exports = FootballPlayer;

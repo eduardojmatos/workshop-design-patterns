@@ -1,12 +1,9 @@
-(function () {
-  const minimalAge = 18;
+const Player = function (options = {name: "Default Name", age: 18}) {
 
-  const Player = function () {
-    return {
-      name: "Default Name",
-      age: 18
-    }
-  };
+  return {
+    name: options.name,
+    age: options.age
+  }
+}
 
-  module.exports = Player;
-})();
+module.exports = Player;
