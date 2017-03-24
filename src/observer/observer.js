@@ -1,15 +1,9 @@
-const Observer = () => {
-
+const Observer = function () {
   return {
-    notify: function (msg) {
-      const message = `Observer message: ${msg}`;
-
-      // could send to another point
-      // ex: console.log(msg, "=>", message);
-
-      return message;
+    notify: function(msg) {
+      console.log(msg);
+      return `Observer message: ${msg}`;
     }
-  };
-};
+  }
+}
 
-module.exports = Observer;

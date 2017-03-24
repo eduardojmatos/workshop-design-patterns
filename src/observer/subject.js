@@ -1,4 +1,4 @@
-const Subject = () => {
+const Subject = function () {
 
   return {
     observers: [],
@@ -7,7 +7,7 @@ const Subject = () => {
       this.observers.push(observer);
     },
 
-    unsubscribe: function(observer) {
+    unsubscribe: function (observer) {
       const index = this.observers.indexOf(observer);
 
       if (index > -1) {
@@ -23,12 +23,11 @@ const Subject = () => {
       }
     },
 
-    notifyAll: function() {
-      for (let i = 0; i < this.observers.length; i++){
+    notifyAll: function(observer) {
+      for (let i = 0; i < this.observers.length; i++) {
         this.observers[i].notify(i);
-      };
+      }
     }
-  };
-};
+  }
+}
 
-module.exports = Subject;

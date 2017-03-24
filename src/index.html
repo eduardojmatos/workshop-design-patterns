@@ -1,7 +1,7 @@
 <html>
   <head>
-    <script src="./build/observer/observer.js"></script>
-    <script src="./build/observer/subject.js"></script>
+    <script src="./../build/observer/observer.js"></script>
+    <script src="./../build/observer/subject.js"></script>
   </head>
   <body>
     <button id="addNewObserver">Add New Observer checkbox</button>
@@ -22,7 +22,7 @@
       extend( controlCheckbox, new Subject() );
 
       controlCheckbox.onclick = function(){
-        controlCheckbox.notify( controlCheckbox.checked );
+        controlCheckbox.notify( controlCheckbox, controlCheckbox.checked );
       };
 
       addBtn.onclick = addNewObserver;
@@ -34,11 +34,11 @@
 
         extend( check, new Observer() );
 
-        check.update = function( value ){
+        check.notify = function( value ){
           this.checked = value;
         };
 
-        controlCheckbox.addObserver( check );
+        controlCheckbox.subscribe( check );
 
         container.appendChild( check );
       }
