@@ -7,7 +7,7 @@
     <button id="addNewObserver">Add New Observer checkbox</button>
     <input id="mainCheckbox" type="checkbox"/>
     <div id="observersContainer"></div>
-
+    
     <script>
       function extend( obj, extension ){
         for ( var key in extension ){
@@ -22,13 +22,10 @@
       extend( controlCheckbox, new Subject() );
 
       controlCheckbox.onclick = function(){
-        controlCheckbox.notify( controlCheckbox, controlCheckbox.checked );
+        controlCheckbox.notifyAll( controlCheckbox.checked );
       };
 
-      addBtn.onclick = addNewObserver;
-
-      function addNewObserver(){
-
+      addBtn.onclick = function() {
         var check = document.createElement( "input" );
         check.type = "checkbox";
 

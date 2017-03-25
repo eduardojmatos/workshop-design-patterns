@@ -35,7 +35,7 @@ describe("Subject Module", function () {
     it("calls notify of observer", function () {
       observer1.notify = sinon.stub().returns("notified");
       subject.subscribe(observer1);
-      subject.notify(observer1);
+      subject.notify(observer1, "notified");
 
       expect(observer1.notify).to.be.called;
     });
@@ -53,7 +53,7 @@ describe("Subject Module", function () {
       const observerSpy1 = sinon.spy(observer1, "notify");
       const observerSpy2 = sinon.spy(observer2, "notify");
 
-      subject.notifyAll();
+      subject.notifyAll("notify");
 
       sinon.assert.called(observerSpy1);
       sinon.assert.called(observerSpy2);
