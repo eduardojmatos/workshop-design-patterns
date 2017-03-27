@@ -4,7 +4,7 @@
   "description": "Lessons from my workshop about design patterns",
   "main": "",
   "scripts": {
-    "test": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail --ignore-leaks || exit 0",
+    "test": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail --ignore-leaks",
     "build": "babel src -d build",
     "watch:src": "onchange \"src/\" -p 10 -- npm-run-all -s build test",
     "watch:test": "onchange \"test/\" -p 10 -- npm run test",
