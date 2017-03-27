@@ -1,4 +1,4 @@
-import FootballPlayer from "../../module/common/football-player.js";
+import FootballPlayer from "./../../module/common/football-player";
 
 const Squad = function() {
   let instance = null;
