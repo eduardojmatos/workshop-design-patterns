@@ -1,7 +1,7 @@
 const expect = require("expect.js");
 const Squad = require("../../../build/singleton/common/squad.js");
 
-describe("Squad Module", function () {
+describe("Squad Singleton", function () {
   let instance, squad;
 
   before(() => {
