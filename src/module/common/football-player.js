@@ -28,4 +28,4 @@ const FootballPlayer = function(options = defaultOptions) {
   };
 };
 
-module.exports = FootballPlayer;
+export default FootballPlayer;

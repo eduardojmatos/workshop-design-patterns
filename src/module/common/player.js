@@ -10,4 +10,4 @@ const Player = function(options = defaultOptions) {
   };
 };
 
-module.exports = Player;
+export default Player;

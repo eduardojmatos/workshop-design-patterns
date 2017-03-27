@@ -18,4 +18,4 @@ const jCare = function(document) {
   };
 };
 
-module.exports = jCare;
+export default jCare;

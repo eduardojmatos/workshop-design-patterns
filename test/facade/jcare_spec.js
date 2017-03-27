@@ -1,7 +1,7 @@
-const expect = require("expect.js");
-const sinon = require("sinon");
-const jsdom = require("mocha-jsdom");
-const jCare = require("../../build/facade/jcare.js");
+import expect from "expect.js";
+import sinon from "sinon";
+import jsdom from "mocha-jsdom";
+import jCare from "../../build/facade/jcare.js";
 
 describe("jCare", function () {
   jsdom();

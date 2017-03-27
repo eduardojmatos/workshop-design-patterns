@@ -1,5 +1,5 @@
-const expect = require("expect.js");
-const Animal = require("../../../build/constructor/prototype/animal.js");
+import expect from "expect.js";
+import Animal from "../../../src/constructor/prototype/animal.js";
 
 describe("Animal Prototype", function () {
   describe("#constructor", function () {

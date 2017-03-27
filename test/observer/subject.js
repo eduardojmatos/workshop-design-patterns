@@ -1,7 +1,7 @@
-const expect = require("expect.js");
-const sinon = require("sinon");
-const Subject = require("../../build/observer/subject.js");
-const Observer = require("../../build/observer/observer.js");
+import expect from "expect.js";
+import sinon from "sinon";
+import Subject from "../../src/observer/subject.js";
+import Observer from "../../src/observer/observer.js";
 
 describe("Subject Module", function () {
   describe("#subscribe", function () {

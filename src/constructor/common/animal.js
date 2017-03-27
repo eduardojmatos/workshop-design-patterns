@@ -10,4 +10,4 @@ const Animal = function(options = defaultOptions) {
   this.getFullName = () => `${this.name}, ${this.specie}`;
 };
 
-module.exports = Animal;
+export default Animal;

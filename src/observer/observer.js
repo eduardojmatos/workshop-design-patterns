@@ -6,7 +6,4 @@ const Observer = function() {
   };
 };
 
-// to use on browsers
-if (typeof module !== "undefined") {
-  module.exports = Observer;
-}
+export default Observer;

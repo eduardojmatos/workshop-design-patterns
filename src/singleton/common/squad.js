@@ -1,4 +1,4 @@
-const FootballPlayer = require("../../module/common/football-player.js");
+import FootballPlayer from "../../module/common/football-player.js";
 
 const Squad = function() {
   let instance = null;
@@ -31,4 +31,4 @@ const Squad = function() {
   };
 };
 
-module.exports = Squad;
+export default Squad;

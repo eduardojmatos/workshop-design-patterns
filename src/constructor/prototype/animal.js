@@ -12,4 +12,4 @@ Animal.prototype.getFullName = function() {
   return `${this.name}, ${this.specie}`;
 };
 
-module.exports = Animal;
+export default Animal;

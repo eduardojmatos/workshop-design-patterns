@@ -1,5 +1,5 @@
-const expect = require("expect.js");
-const FootballPlayer = require("../../../build/module/common/football-player.js");
+import expect from "expect.js";
+import FootballPlayer from "../../../src/module/common/football-player.js";
 
 describe("FootballPlayer Module", function () {
   describe("#initialize", function () {

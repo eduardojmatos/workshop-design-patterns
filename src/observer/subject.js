@@ -30,6 +30,4 @@ const Subject = function() {
   };
 };
 
-if (typeof module !== "undefined") {
-  module.exports = Subject;
-}
+export default Subject;

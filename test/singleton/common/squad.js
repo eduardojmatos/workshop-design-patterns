@@ -1,5 +1,5 @@
-const expect = require("expect.js");
-const Squad = require("../../../build/singleton/common/squad.js");
+import expect from "expect.js";
+import Squad from "../../../src/singleton/common/squad.js";
 
 describe("Squad Singleton", function () {
   let instance, squad;

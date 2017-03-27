@@ -1,6 +1,7 @@
-const expect = require("expect.js");
-const sinon = require("sinon");
-const Observer = require("../../build/observer/observer.js");
+import expect from "expect.js";
+import sinon from "sinon";
+import Animal from "../../src/constructor/common/animal.js";
+import Observer from "../../src/observer/observer.js";
 
 describe("Observer Module", function () {
   describe("#notify", function () {
