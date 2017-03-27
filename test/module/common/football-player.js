@@ -6,7 +6,7 @@ describe("FootballPlayer Module", function () {
     describe("without parameters", function () {
       let footballPlayer = new FootballPlayer();
 
-      it("instantiate Player", function () {
+      it("instantiate FootballPlayer", function () {
         expect(footballPlayer.name).to.be("Default Name");
         expect(footballPlayer.age).to.be(18);
       });
@@ -43,11 +43,11 @@ describe("FootballPlayer Module", function () {
     });
 
     describe("with parameters", function () {
-      let footballPlayer = new FootballPlayer();
+      let footballPlayer = new FootballPlayer({name: "Test", age: 30});
 
-      it("should be instantiate Player", function () {
-        expect(footballPlayer.name).to.be("Default Name");
-        expect(footballPlayer.age).to.be(18);
+      it("should be instantiate FootbalPlayer", function () {
+        expect(footballPlayer.name).to.be("Test");
+        expect(footballPlayer.age).to.be(30);
       });
     });
   });
