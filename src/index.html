@@ -2,43 +2,79 @@
   <head>
     <script src="./../build/observer/observer.js"></script>
     <script src="./../build/observer/subject.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #addNewObserver {
+        display: inline-block;
+        padding: 15px 20px;
+        background-color: #404;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      #mainCheckbox {
+        margin: 5px;
+        border: 1px solid #ccc;
+      }
+
+      #mainCheckbox:after {
+        content: "check all";
+        display: block;
+        min-width: 100px;
+        margin-left: 20px;
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      #observersContainer {
+        padding: 20px;
+      }
+
+      #observersContainer input {
+        margin-right: 20px;
+      }
+    </style>
   </head>
   <body>
     <button id="addNewObserver">Add New Observer checkbox</button>
     <input id="mainCheckbox" type="checkbox"/>
     <div id="observersContainer"></div>
-    
+
     <script>
-      function extend( obj, extension ){
-        for ( var key in extension ){
+      function extend(obj, extension){
+        for (var key in extension){
           obj[key] = extension[key];
         }
-      }
-
-      var controlCheckbox = document.getElementById( "mainCheckbox" ),
-        addBtn = document.getElementById( "addNewObserver" ),
-        container = document.getElementById( "observersContainer" );
-
-      extend( controlCheckbox, new Subject() );
-
-      controlCheckbox.onclick = function(){
-        controlCheckbox.notifyAll( controlCheckbox.checked );
       };
 
-      addBtn.onclick = function() {
-        var check = document.createElement( "input" );
+      var controlCheckbox = document.getElementById("mainCheckbox"),
+        addBtn = document.getElementById("addNewObserver"),
+        container = document.getElementById("observersContainer");
+
+      extend(controlCheckbox, new Subject());
+
+      controlCheckbox.onclick = function () {
+        controlCheckbox.notifyAll(controlCheckbox.checked);
+      };
+
+      addBtn.onclick = function () {
+        var check = document.createElement("input");
         check.type = "checkbox";
 
-        extend( check, new Observer() );
+        extend(check, new Observer());
 
-        check.notify = function( value ){
+        check.notify = function (value) {
           this.checked = value;
         };
 
-        controlCheckbox.subscribe( check );
+        controlCheckbox.subscribe(check);
 
-        container.appendChild( check );
-      }
+        container.appendChild(check);
+      };
     </script>
   </body>
 </html>
