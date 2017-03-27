@@ -8,6 +8,7 @@
     "build": "babel src -d build",
     "watch:src": "onchange \"src/\" -p 10 -- npm-run-all -s build test",
     "watch:test": "onchange \"test/\" -p 10 -- npm run test",
+    "server": "http-server -p 4001",
     "dev": "npm-run-all -p watch:src watch:test"
   },
   "engines": {
