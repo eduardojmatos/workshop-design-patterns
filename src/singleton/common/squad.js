@@ -1,36 +1,34 @@
-const Squad = (function () {
-  const FootballPlayer = require("../../module/common/football-player.js");
+const FootballPlayer = require("../../module/common/football-player.js");
+
+const Squad = function () {
   var instance = null;
 
-  function init() {
+  const init = function () {
     let players = [];
 
     return {
-      addPlayer: (options = {name: "Default", age: 18}) => {
-        const newPlayer = new FootballPlayer();
-
-        newPlayer.name = options.name;
-        newPlayer.age = options.age;
+      addPlayer: (options) => {
+        const newPlayer = new FootballPlayer({
+          name: options.name, age: options.age
+        });
 
         players.push(newPlayer);
 
         return players;
       },
-      getPlayers: () => {
-        return players;
-      }
-    };
+      getPlayers: () => players
+    }
   }
 
   return {
     getInstance: () => {
-      if ( !instance ) {
+      if (!instance) {
         instance = init();
       }
 
       return instance;
     }
   }
-})();
+}
 
 module.exports = Squad;
