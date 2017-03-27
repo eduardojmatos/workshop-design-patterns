@@ -1,7 +1,7 @@
 import expect from "expect.js";
 import sinon from "sinon";
 import jsdom from "mocha-jsdom";
-import jCare from "../../build/facade/jcare.js";
+import jCare from "../../src/facade/jcare.js";
 
 describe("jCare", function () {
   jsdom();
