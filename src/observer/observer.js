@@ -7,3 +7,6 @@ const Observer = function () {
   }
 }
 
+if(typeof module !== 'undefined') {
+	module.exports = Observer;
+}
