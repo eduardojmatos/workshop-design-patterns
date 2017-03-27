@@ -1,13 +1,12 @@
-const Observer = function () {
+const Observer = function() {
   return {
-    notify: function(msg) {
-      //console.log(msg);
+    notify(msg) {
       return `Observer message: ${msg}`;
-    }
-  }
-}
+    },
+  };
+};
 
 // to use on browsers
-if (typeof module !== 'undefined') {
-	module.exports = Observer;
+if (typeof module !== "undefined") {
+  module.exports = Observer;
 }

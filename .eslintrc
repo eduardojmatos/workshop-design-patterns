@@ -1,4 +1,4 @@
-extends: "airbnb/base"
+extends: "airbnb-base"
 
 parser: "babel-eslint"
 plugins: ["babel"]
@@ -22,6 +22,7 @@ rules:
   # Best Practices
   eqeqeq: [2, "allow-null"]
   no-multi-spaces: 0
+  quotes: [2, "double"]
 
   # Variables
   no-use-before-define: [2, "nofunc"]

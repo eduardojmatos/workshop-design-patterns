@@ -1,11 +1,10 @@
-const jCare = function (document) {
-
+const jCare = function(document) {
   if (!document) throw new Error("document needs to be passed as argument");
 
   this.document = document;
 
   return {
-    findClass: (className) => {
+    findClass(className) {
       let elements;
 
       if (document.querySelector) {
@@ -15,7 +14,7 @@ const jCare = function (document) {
       }
 
       return elements;
-    }
+    },
   };
 };
 

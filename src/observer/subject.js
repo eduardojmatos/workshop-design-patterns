@@ -1,13 +1,12 @@
-const Subject = function () {
-
+const Subject = function() {
   return {
     observers: [],
 
-    subscribe: function(observer) {
+    subscribe(observer) {
       this.observers.push(observer);
     },
 
-    unsubscribe: function (observer) {
+    unsubscribe(observer) {
       const index = this.observers.indexOf(observer);
 
       if (index > -1) {
@@ -15,7 +14,7 @@ const Subject = function () {
       }
     },
 
-    notify: function(observer, value) {
+    notify(observer, value) {
       const index = this.observers.indexOf(observer);
 
       if (index > -1) {
@@ -23,14 +22,14 @@ const Subject = function () {
       }
     },
 
-    notifyAll: function(value) {
-      for (let i = 0; i < this.observers.length; i++) {
+    notifyAll(value) {
+      for (let i = 0; i < this.observers.length; i += 1) {
         this.observers[i].notify(value);
       }
-    }
-  }
-}
+    },
+  };
+};
 
-if(typeof module !== 'undefined') {
+if (typeof module !== "undefined") {
   module.exports = Subject;
 }
