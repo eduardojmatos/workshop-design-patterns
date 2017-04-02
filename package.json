@@ -4,10 +4,11 @@
   "description": "Lessons from my workshop about design patterns",
   "main": "",
   "scripts": {
-    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail --ignore-leaks",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm run mocha",
+    "mocha": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail --ignore-leaks",
     "build": "babel src -d build",
-    "watch:src": "onchange \"src/\" -p 10 -- npm-run-all -s build test",
-    "watch:test": "onchange \"test/\" -p 10 -- npm run test",
+    "watch:src": "onchange \"src/\" -p 10 -- npm-run-all -s build mocha",
+    "watch:test": "onchange \"test/\" -p 10 -- npm run mocha",
     "server": "http-server -p 4001",
     "dev": "npm-run-all -p watch:src watch:test"
   },
