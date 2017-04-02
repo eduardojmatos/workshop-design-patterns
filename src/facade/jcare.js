@@ -5,6 +5,8 @@ const jCare = function(document) {
 
   return {
     findClass(className) {
+      if (!className) throw new Error("a class needs to be passed");
+
       let elements;
 
       if (document.querySelector) {
