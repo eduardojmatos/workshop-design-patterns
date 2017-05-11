@@ -13,15 +13,7 @@ describe("Squad Singleton", function () {
     it("instantiates the Squad", function () {
       const players = instance.getPlayers();
 
-      expect(players).not.to.be_null;
-      expect(players.length).to.be_empty;
-    });
-
-    it("instantiates the Squad", function () {
-      const players = instance.getPlayers();
-
-      expect(players).not.to.be_null;
-      expect(players.length).to.be_empty;
+      expect(players).to.be.empty();
     });
 
     describe("#addPlayer", function () {
