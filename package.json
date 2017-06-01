@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm run mocha",
-    "mocha": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail --ignore-leaks",
+    "mocha": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail -R progress --ignore-leaks",
     "build": "babel src -d build",
     "watch:src": "onchange \"src/\" -p 10 -- npm-run-all -s build mocha",
     "watch:test": "onchange \"test/\" -p 10 -- npm run mocha",
