@@ -7,10 +7,10 @@
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm run mocha",
     "mocha": "mocha -G -c --require ./node_modules/expect.js/index.js --compilers js:babel-core/register --recursive test --bail -R progress --ignore-leaks",
     "build": "babel src -d build",
-    "watch:src": "onchange \"src/\" -p 10 -- npm-run-all -s build mocha",
-    "watch:test": "onchange \"test/\" -p 10 -- npm run mocha",
+    "watch:src": "onchange \"src/**/*.{js}\" -p 10 -- npm-run-all -s build mocha",
+    "watch:test": "onchange \"test/**/*.{js}\" -p 10 -- npm run mocha",
     "server": "http-server -p 4001",
-    "dev": "npm-run-all -p watch:src watch:test"
+    "start": "npm-run-all -p watch:src watch:test"
   },
   "nyc": {
     "sourceMap": false,
