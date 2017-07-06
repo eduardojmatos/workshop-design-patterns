@@ -7,7 +7,7 @@ const FootballPlayer = function(options = defaultOptions) {
   const minimalAge = 18;
   let modality = "Football";
 
-  const hasMinimalAge = age => (age > minimalAge);
+  const hasMinimalAge = age => age > minimalAge;
 
   return {
     name: options.name,
