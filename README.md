@@ -44,3 +44,8 @@ All patterns have a specific test on `./test` folder using mocha.
 [travis-url]: https://travis-ci.org/eduardojmatos/workshop-design-patterns
 [david-badge]: https://david-dm.org/eduardojmatos/workshop-design-patterns/dev-status.svg
 [david-url]: https://david-dm.org/eduardojmatos/workshop-design-patterns?type=dev
+
+
+## Links:
+- Book in pt-BR JavaScript Design Patterns:
+https://github.com/fhferreira/aprendendo-padroes-de-projeto-javascript/blob/master/README.md
