@@ -21,5 +21,23 @@ describe("Player Module", function () {
       });
     });
   });
+
+  describe("#getFullName", function() {
+    describe("without parameters", function() {
+      let player = new Player();
+
+      it("should return Name and age", function() {
+        expect(player.getFullName()).to.be("Default Name, 18");
+      });
+    });
+
+    describe("with parameters", function() {
+      let player = new Player({name: "Ademir da Guia", age: 70});
+
+      it("should return Name and age", function() {
+        expect(player.getFullName()).to.be("Ademir da Guia, 70");
+      });
+    });
+  });
 });
 

@@ -5,8 +5,11 @@ const defaultOptions = {
 
 const Player = function(options = defaultOptions) {
   return {
-    name: options.name || "Default Name",
-    age: options.age || 18,
+    name: options.name,
+    age: options.age,
+    getFullName() {
+      return `${this.name}, ${this.age}`;
+    }
   };
 };
 
