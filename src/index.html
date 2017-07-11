@@ -45,11 +45,9 @@
     <div id="observersContainer"></div>
 
     <script>
-      function extend(obj, extension){
-        for (var key in extension){
-          obj[key] = extension[key];
-        }
-      };
+      function extend (object, extension) {
+        Object.assign(object, extension);
+      }
 
       var controlCheckbox = document.getElementById("mainCheckbox"),
         addBtn = document.getElementById("addNewObserver"),
