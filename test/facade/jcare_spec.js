@@ -31,24 +31,24 @@ describe("jCare", function () {
 
     it("with argument return elements", function () {
       expect($.findClass("test")).not.to.be.empty;
-      expect($.findClass("test").classList).to.be(this.foundedElement.classList);
+      expect($.findClass("test")[0].classList).to.be(this.foundedElement.classList);
     });
 
     it("without argument returns error", function () {
       expect($.findClass).to.throwException(/a class needs to be passed/);
     });
 
-    it("uses querySelector if browser supports", function () {
-      const querySelector = sinon.spy(document, "querySelector");
+    it("uses querySelectorAll if browser supports", function () {
+      const querySelectorAll = sinon.spy(document, "querySelectorAll");
 
       $.findClass("test");
 
-      sinon.assert.calledOnce(querySelector);
+      sinon.assert.calledOnce(querySelectorAll);
     });
 
-    it("uses getElementsByClassName if browser dont supports querySelector", function () {
+    it("uses getElementsByClassName if browser dont supports querySelectorAll", function () {
       $ = new jCare(document);
-      document.querySelector = null;
+      document.querySelectorAll = null;
 
       const getElementsByClassName = sinon.spy(document, "getElementsByClassName");
 
