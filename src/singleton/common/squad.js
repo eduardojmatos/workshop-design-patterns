@@ -1,4 +1,4 @@
-import FootballPlayer from "./../../module/common/football-player";
+import FootballPlayer from '../../module/common/football-player.js';
 
 const Squad = function() {
   let instance = null;
@@ -7,16 +7,14 @@ const Squad = function() {
     const players = [];
 
     return {
+      getPlayers: () => players,
       addPlayer: (options) => {
-        const newPlayer = new FootballPlayer({
-          name: options.name, age: options.age,
-        });
+        const newPlayer = new FootballPlayer(options);
 
         players.push(newPlayer);
 
         return players;
-      },
-      getPlayers: () => players,
+      }
     };
   };
 
