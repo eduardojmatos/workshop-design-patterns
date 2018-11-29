@@ -1,11 +1,14 @@
-import { expect, describe, it } from "expect.js";
+import expect from "expect.js";
 import sinon from "sinon";
-import jsdom from "mocha-jsdom";
+import { JSDOM } from "jsdom";
 import jCare from "../../src/facade/jcare";
 
-describe("jCare", function() {
-  jsdom();
+const { document } = new JSDOM({
+  url: "http://localhost",
+  globalize: false,
+}).window;
 
+describe("jCare", function() {
   before(function() {
     this.foundedElement = document.createElement("div");
     this.foundedElement.classList.add("test");
@@ -31,7 +34,7 @@ describe("jCare", function() {
 
     it("with argument return elements", () => {
       expect($.findClass("test")).not.to.be.empty;
-      expect($.findClass("test")[0].classList).to.be(this.foundedElement.classList);
+      expect($.findClass("test")[0].classList[0]).to.be('test');
     });
 
     it("without argument returns error", () => {
