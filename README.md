@@ -1,4 +1,4 @@
-# workshop-design-patterns 
+# workshop-design-patterns
 
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
@@ -10,15 +10,15 @@ Lessons from my workshop about design patterns. The master branch has all design
 
 # Installation
 
-To install the project, just clone the repo and run `npm install`. 
+To install the project, just clone the repo and run `npm install`.
 
 To start, there is some scripts like:
 
-- `npm run dev`
+- `npm start`
   Executes two other tasks, `watch:src` and `watch:test`. This two tasks observes `src` and `test` folders and executes some scripts, like babel transpiler and mocha.
 - `npm test`
   Default task to run mocha tests and istanbul coverage analysis.
-  
+
 # Design Patterns
 
 Initially, there are 6 JavaScript Design Patterns on this repo (constructor has a variation, the prototype). The idea is to add all known JS design patterns.
@@ -33,7 +33,7 @@ Link to all patterns:
 - [Facade](https://github.com/eduardojmatos/workshop-design-patterns/blob/master/src/facade/jcare.js);
 
 All patterns have a specific test on `./test` folder using mocha.
- 
+
 [npm-badge]: https://img.shields.io/npm/v/codeclimate-test-reporter.svg
 [npm-url]: https://www.npmjs.com/package/codeclimate-test-reporter
 [codeclimate-url]: https://codeclimate.com/github/eduardojmatos/workshop-design-patterns
