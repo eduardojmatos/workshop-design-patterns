@@ -3,7 +3,7 @@ plugins:
   eslint:
     enabled: true
     config:
-      config: ./.eslintrc.json
+      config: ./.eslintrc
 checks:
   duplication:
     enabled: true
@@ -12,5 +12,5 @@ checks:
       - javascript
   fixme:
     enabled: true
-exclude_paths:
+exclude_patterns:
 - test/
