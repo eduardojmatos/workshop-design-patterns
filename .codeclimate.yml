@@ -3,7 +3,7 @@ plugins:
   eslint:
     enabled: true
     config:
-      config: ./.eslintrc
+      config: ./.eslintrc.json
 checks:
   duplication:
     enabled: true

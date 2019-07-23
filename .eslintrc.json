@@ -1,0 +1,62 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:react/recommended"
+  ],
+
+  "parser": "babel-eslint",
+
+  "plugins": [
+    "babel",
+    "import",
+    "jest"
+  ],
+
+  "rules": {
+    "no-unused-vars": 1,
+    "no-console": 1,
+    "func-names": 0,
+    "curly": ["error", "all"],
+    "class-methods-use-this": 1,
+    "no-new": 1,
+    "max-len": 1,
+    "arrow-body-style": 1,
+    "implicit-arrow-linebreak": 0,
+    "function-paren-newline": 0,
+    "object-curly-newline": 0,
+    "prefer-destructuring": [0, {
+      "VariableDeclarator": {
+        "array": false,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": true,
+        "object": false
+      }
+    }, {
+      "enforceForRenamedProperties": false
+    }],
+    "camelcase": 1
+  },
+
+  "globals": {
+    "document": true,
+    "window": true,
+    "CustomEvent": true
+  },
+
+  "env": {
+    "jest/globals": true
+  },
+
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  }
+}
