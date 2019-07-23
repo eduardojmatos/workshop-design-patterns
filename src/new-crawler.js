@@ -5,6 +5,7 @@ class NewCrawler {
     this.reader = new ReadCsv(url, this.onCrawled);
   }
 
+  // TODO: fix
   onCrawled(document) {
     console.log('Documento foi processado');'
   }
