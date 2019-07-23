@@ -1,11 +1,13 @@
 const defaultOptions = {
-  name: "Default Animal",
-  specie: "Unspecified",
+  name: 'Default Animal',
+  specie: 'Unspecified',
 };
 
 const Animal = function(options = defaultOptions) {
   this.name = options.name;
   this.specie = options.specie;
+
+  return this;
 };
 
 Animal.prototype.getFullName = function() {

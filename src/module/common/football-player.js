@@ -1,31 +1,30 @@
 const defaultOptions = {
-  name: "Default Name",
+  name: 'Default Name',
   age: 18,
-};
+}
 
-const FootballPlayer = function(options = defaultOptions) {
+const GenericPlayer = function(options = defaultOptions) {
   const minimalAge = 18;
-  let modality = "Football";
-
-  const hasMinimalAge = age => age > minimalAge;
+  let modality = 'Football';
+  const hasMininalAge = age => age > minimalAge;
 
   return {
     name: options.name,
     age: options.age,
-    setModality(newModality = modality) {
+    getModality: () => modality,
+    setModality(newModality) {
       modality = newModality;
       return modality;
     },
-    getModality: () => modality,
-    setAge(age) {
-      if (!hasMinimalAge(age)) {
+    setAge(newAge) {
+      if (!hasMininalAge(newAge)) {
         return null;
       }
 
-      this.age = age;
+      this.age = newAge;
       return this.age;
-    },
-  };
+    }
+  }
 };
 
-export default FootballPlayer;
+export default GenericPlayer;

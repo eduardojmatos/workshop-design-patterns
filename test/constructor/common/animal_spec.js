@@ -1,5 +1,5 @@
 import expect from "expect.js";
-import Animal from "../../../src/constructor/common/animal.js";
+import Animal from "../../../src/constructor/common/animal";
 
 describe("Animal", function () {
   describe("#constructor", function () {
