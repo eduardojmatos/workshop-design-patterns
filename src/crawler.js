@@ -5,9 +5,9 @@
 	"use strict";
 
 	const fs = require("fs");
-	const csvTransform = require("csv-to-json-stream");
-	const stream = require("stream");
-	const Transform = stream.Transform;
+	const csvTransform = require("csv-to-json-stream")
+	const stream = require("stream")
+	const Transform = stream.Transform
 	const transformStream = new Transform({
 		transform(chunk, encoding, callback) {
 			callback(null, chunk);
