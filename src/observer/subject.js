@@ -1,4 +1,5 @@
 const Subject = function() {
+
   return {
     observers: [],
 
@@ -23,11 +24,9 @@ const Subject = function() {
     },
 
     notifyAll(value) {
-      for (let i = 0; i < this.observers.length; i += 1) {
-        this.observers[i].notify(value);
-      }
-    },
-  };
-};
+      this.observers.forEach(observer => observer.notify(value));
+    }
+  }
+}
 
 export default Subject;

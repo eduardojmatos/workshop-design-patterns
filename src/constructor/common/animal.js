@@ -1,13 +1,19 @@
 const defaultOptions = {
-  name: "Default Animal",
-  specie: "Unspecified",
+  name: 'Default Animal',
+  specie: 'Unspecified'
 };
 
-const Animal = function(options = defaultOptions) {
-  this.name = options.name;
-  this.specie = options.specie;
+class Animal {
+  constructor(options = defaultOptions) {
+    this.name = options.name;
+    this.specie = options.specie;
 
-  this.getFullName = () => `${this.name}, ${this.specie}`;
-};
+    return this;
+  }
+
+  getFullName() {
+    return `${this.name}, ${this.specie}`;
+  }
+}
 
 export default Animal;

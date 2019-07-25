@@ -1,22 +1,21 @@
-import FootballPlayer from '../../module/common/football-player.js';
+import GenericPlayer from '../../module/common/football-player';
 
 const Squad = function() {
-  let instance = null;
+  let instance;
 
-  const init = function() {
+  const init = function () {
     const players = [];
 
     return {
       getPlayers: () => players,
       addPlayer: (options) => {
-        const newPlayer = new FootballPlayer(options);
-
+        const newPlayer = new GenericPlayer(options);
         players.push(newPlayer);
 
         return players;
       }
-    };
-  };
+    }
+  }
 
   return {
     getInstance: () => {
@@ -25,8 +24,8 @@ const Squad = function() {
       }
 
       return instance;
-    },
-  };
+    }
+  }
 };
 
 export default Squad;

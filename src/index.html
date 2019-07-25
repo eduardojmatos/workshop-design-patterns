@@ -5,6 +5,10 @@
     </script>
     <script src="./../build/observer/observer.js"></script>
     <script src="./../build/observer/subject.js"></script>
+    <script>
+      var module = { exports: null };
+      var exports = { default: null };
+    </script>
     <style>
       * {
         margin: 0;
@@ -62,7 +66,7 @@
         controlCheckbox.notifyAll(controlCheckbox.checked);
       };
 
-      addBtn.onclick = function () {
+      alddBtn.onclick = function () {
         var check = document.createElement("input");
         check.type = "checkbox";
 
