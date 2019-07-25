@@ -26,7 +26,7 @@ const Subject = function() {
       for (let i = 0; i < this.observers.length; i += 1) {
         this.observers[i].notify(value);
       }
-    },
+    }
   };
 };
 
