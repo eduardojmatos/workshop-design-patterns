@@ -54,8 +54,8 @@
 				});
 			});
 		},
-		saveDocuments: function (Mongo, scheme, documents){
-			return new Promise(function (resolve, reject) {
+		saveDocuments: function(Mongo, scheme, documents){
+			return new Promise(function(resolve, reject){
 				//let docs = [];
 
 				//for (let i = 0; i < documents.length; i += 1) {
