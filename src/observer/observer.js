@@ -1,7 +1,7 @@
 const Observer = function() {
   return {
     notify(msg) {
-      return `Observer message: ${msg}`;
+      return `Observer message: ${msg}`
     },
   };
 };

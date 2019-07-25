@@ -3,19 +3,19 @@ const Subject = function() {
     observers: [],
 
     subscribe(observer) {
-      this.observers.push(observer);
+      this.observers.push(observer)
     },
 
     unsubscribe(observer) {
-      const index = this.observers.indexOf(observer);
+      const index = this.observers.indexOf(observer)
 
       if (index > -1) {
-        this.observers.splice(index, 1);
+        this.observers.splice(index, 1)
       }
     },
 
     notify(observer, value) {
-      const index = this.observers.indexOf(observer);
+      const index = this.observers.indexOf(observer)
 
       if (index > -1) {
         this.observers[index].notify(value);
@@ -26,7 +26,7 @@ const Subject = function() {
       for (let i = 0; i < this.observers.length; i += 1) {
         this.observers[i].notify(value);
       }
-    },
+    }
   };
 };
 
