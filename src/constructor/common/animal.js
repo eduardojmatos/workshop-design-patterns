@@ -1,13 +1,13 @@
 const defaultOptions = {
   name: "Default Animal",
-  specie: "Unspecified",
+  specie: "Unspecified"
 };
 
 const Animal = function(options = defaultOptions) {
-  this.name = options.name;
-  this.specie = options.specie;
+  this.name = options.name
+  this.specie = options.specie
 
   this.getFullName = () => `${this.name}, ${this.specie}`;
 };
 
-export default Animal;
+export default Animal
